@@ -9,22 +9,23 @@ int InputInt(string prompt)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void ShowEvenNumbers(int num1, int num2)
+void ShowNumbers(int num1, int num2)
 {
     if (num1 > num2) return;
+
     if (num1 % 2 != 0)
     {
         System.Console.WriteLine($"{num1 + 1}");
-        ShowEvenNumbers(num1 + 2, num2 - 1);
+        ShowNumbers(num1 + 2, num2 - 1);
     }
     else
     {
         System.Console.WriteLine($"{num1}");
-        ShowEvenNumbers(num1 + 2, num2);
+        ShowNumbers(num1 + 2, num2);
     }
 
 }
 
 int number1 = InputInt("Введите минимальное число");
 int number2 = InputInt("Введите максимальное число");
-ShowEvenNumbers(number1, number2);
+ShowNumbers(number1, number2);
